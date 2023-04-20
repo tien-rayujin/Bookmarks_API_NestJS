@@ -1,7 +1,15 @@
 # Dependency Injection
 
-- Controller
-- Provider - Service
+- `@Controller` Controller
+- `@Injectable` Provider - Service
+- `@Module`
+  + `@Global()`
+  + imports
+  + exports
+  + controller:
+  + provider:
+- `@Body`
+
 
 # Features in NEST
 
@@ -15,6 +23,12 @@
 **return content type**
 
 - in nest type return is automatic, it's mean when return a string it Content-type will be text/html, and when return an json it will be application/json
+
+**Depend on the type of framework use to get the request from URL**
+- nest provide a decorator `@Body() dto: any` to access the body of URL, by any framework used will be auto config by nest 
+
+
+
 
 # Setup Docker PostgressDB
 
