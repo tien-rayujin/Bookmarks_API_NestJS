@@ -7,4 +7,4 @@ services:
       POSTGRES_PASSWORD: 123
       POSTGRES_DB: bookmark_NestJS_DB
     ports:
-      - 5433:5433
+      - 5434:5432
