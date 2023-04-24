@@ -64,3 +64,8 @@
   `@Body('password', ParseIntPipe) password: number`
   -> this will parse the password to an integer before passing it to the controller
   and if the password is not an integer, it will throw an error.
+
+
+# Authentication and Authorization
+- `npm install --save passport @nestjs/passport passport-jwt @nestjs/jwt`
+- `npm install --save-dev @types/passport-jwt`
