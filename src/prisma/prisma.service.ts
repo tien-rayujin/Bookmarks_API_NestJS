@@ -14,4 +14,10 @@ export class PrismaService extends PrismaClient {
       },
     });
   }
+
+  // clean up the db for test env, another method is use onDelete: Cascade on primary key but I dont want to do the migration
+  cleanDb() {
+    // tear down process
+    this.$transaction([this.bookmark.deleteMany(), this.user.deleteMany()]);
+  }
 }
