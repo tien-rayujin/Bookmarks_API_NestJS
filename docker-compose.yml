@@ -8,3 +8,11 @@ services:
       POSTGRES_DB: bookmark_NestJS_DB
     ports:
       - 5434:5432
+  test-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: bookmark_NestJS_DB
+    ports:
+      - 5435:5432
