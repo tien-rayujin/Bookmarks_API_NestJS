@@ -3,13 +3,12 @@
 - `@Controller` Controller
 - `@Injectable` Provider - Service
 - `@Module`
-  + `@Global()`
-  + imports
-  + exports
-  + controller:
-  + provider:
+  - `@Global`
+  - `@imports`
+  - `@exports`
+  - `@controller`
+  - `@provider`
 - `@Body`
-
 
 # Features in NEST
 
@@ -25,10 +24,8 @@
 - in nest type return is automatic, it's mean when return a string it Content-type will be text/html, and when return an json it will be application/json
 
 **Depend on the type of framework use to get the request from URL**
-- nest provide a decorator `@Body() dto: any` to access the body of URL, by any framework used will be auto config by nest 
 
-
-
+- nest provide a decorator `@Body() dto: any` to access the body of URL, by any framework used will be auto config by nest
 
 # Setup Docker PostgressDB
 
@@ -45,12 +42,25 @@
   - setup docker with range 5434:5432 will still run
   - it will also run `npx prisma generate`
 - after the setup use can import and create an instance from PismaClient
-  + `import { User, Bookmark } from '@prisma/client';`
 
-  + `import { PrismaClient } from '@prisma/client'` 
+  - `import { User, Bookmark } from '@prisma/client';`
+
+  - `import { PrismaClient } from '@prisma/client'`
     `const prisma = new PrismaClient()`
+
 - can run the studio to browser by `npx prisma studio`
 
 # Use Prisma
 
 - create a module that can access directly prima `nest g module prisma`
+
+# Note for pipe, there are some built-in pipes:
+
+- `ParseIntPipe`: Parse a string to an integer.
+- `ParseBoolPipe`: Parse a string to a boolean.
+- `ParseArrayPipe`: Parse a string to an array.
+
+- to use them on pipe of a parameter, you can use:
+  `@Body('password', ParseIntPipe) password: number`
+  -> this will parse the password to an integer before passing it to the controller
+  and if the password is not an integer, it will throw an error.
