@@ -3,6 +3,8 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
+  HttpStatus,
   Param,
   ParseIntPipe,
   Patch,
@@ -18,17 +20,10 @@ import { CreateBookmarkDto, EditBookmarkDto } from './dto';
 @Controller('bookmarks')
 export class BookmarkController {
   constructor(private bookmarkService: BookmarkService) {}
+
   @Get()
   getBookmarks(@GetUser('id') userId: number) {
     return this.bookmarkService.getBookmarks(userId);
-  }
-
-  @Get(':id')
-  getBookmarkById(
-    @GetUser('id') userId: number,
-    @Param('id', ParseIntPipe) bookmarkId: number,
-  ) {
-    return this.bookmarkService.getBookmarkById(userId, bookmarkId);
   }
 
   @Post()
@@ -37,6 +32,14 @@ export class BookmarkController {
     @Body() dto: CreateBookmarkDto,
   ) {
     return this.bookmarkService.createBookmark(userId, dto);
+  }
+
+  @Get(':id')
+  getBookmarkById(
+    @GetUser('id') userId: number,
+    @Param('id', ParseIntPipe) bookmarkId: number,
+  ) {
+    return this.bookmarkService.getBookmarkById(userId, bookmarkId);
   }
 
   @Patch(':id')
@@ -48,6 +51,7 @@ export class BookmarkController {
     return this.bookmarkService.editBookmarkById(userId, bookmarkId, dto);
   }
 
+  @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(':id')
   deleteBookmarkById(
     @GetUser('id') userId: number,
