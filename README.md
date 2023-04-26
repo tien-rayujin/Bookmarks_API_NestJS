@@ -1,8 +1,8 @@
-## Goal - Objective
-  This project create a simple API allow user to register, login account and CRUD with their bookmarks 
+## Goal/Objective:
+  The goal of this project is to create a simple API that allows users to register and login to their accounts and perform CRUD operations with their bookmarks.
 
 ## Requirement before run the app
- - Your machine must installed [postgreSQL](https://www.postgresql.org/) and [Docker](https://www.docker.com/)
+ - Make sure that PostgreSQL (https://www.postgresql.org/) and Docker (https://www.docker.com/) are installed on your machine.
 
 ## Installation
 
