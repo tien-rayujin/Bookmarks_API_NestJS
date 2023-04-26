@@ -2,7 +2,7 @@
   The goal of this project is to create a simple API that allows users to register and login to their accounts and perform CRUD operations with their bookmarks.
 
 ## Requirement before run the app
- - Make sure that PostgreSQL (https://www.postgresql.org/) and Docker (https://www.docker.com/) are installed on your machine.
+ - Make sure that [PostgreSQL](https://www.postgresql.org/) and [Docker](https://www.docker.com/) are installed on your machine.
 
 ## Installation
 
