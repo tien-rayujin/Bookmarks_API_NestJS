@@ -10,7 +10,7 @@
 # install required package
 $ npm install
 
-# use prisma compose to setup and deloy the database
+# use docker compose to setup and deloy the database
 $ npm run db:dev:restart
 
 # to run test server
@@ -50,7 +50,7 @@ $ npm run test:e2e
 
 *User*: **Authentication** required
  - GET `/users/me`: get this user information - 200
- - PATCH `/users/`: create update on this user body contains: `{email?, firstName?, lastName?}` - 201
+ - PATCH `/users`: create update on this user body contains: `{email?, firstName?, lastName?}` - 201
 
 *Bookmark*: **Authentication** required
  - GET `/bookmarks`: get owns bookmark list created by this user - 200
