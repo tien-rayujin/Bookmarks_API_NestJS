@@ -45,8 +45,8 @@ $ npm run test:e2e
 
 ## Route used in this project
 *Auth*:
- - POST `/signup`: required body: `{email, password}` - 201
- - POST `/signin`: required body: `{email, password}` - 200
+ - POST `/auth/signup`: required body: `{email, password}` - 201
+ - POST `/auth/signin`: required body: `{email, password}` - 200
 
 *User*: **Authentication** required
  - GET `/users/me`: get this user information - 200
