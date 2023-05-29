@@ -1,8 +1,8 @@
 {
   "name": "bookmarks_api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Simple bookmarks_api",
+  "author": "Tien-Rayujin",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
